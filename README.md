@@ -11,4 +11,4 @@
 
 Now just run the application.
 
-<img src="screenshot.gif" alt="drawing" style="width:100px;"/>
+<img src="screenshot.gif" alt="drawing" style="width:300px;"/>
