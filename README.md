@@ -10,6 +10,6 @@
 > static let keyAPI = “ADD YOUR API KEY HERE”
 
 Now just run the application.
-<div style="text-align:center">
+<div style="width:100%;text-align:center">
 <img src="screenshot.gif" alt="Recording the screen." style="width:300px;"/>
 </div>
