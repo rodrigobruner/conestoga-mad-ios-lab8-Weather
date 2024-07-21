@@ -11,4 +11,4 @@
 
 Now just run the application.
 
-![System demo](screenshot.gif)
+<img src="screenshot.gif" alt="drawing" style="width:100px;"/>
