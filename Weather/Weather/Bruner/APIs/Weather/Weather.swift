@@ -8,14 +8,17 @@
 import Foundation
 import UIKit
 
-func getTheClimateIn(latitude lat: String, longitude lon: String, completion: @escaping (WeatherRequest?, Error?) -> Void) {
+func getTheClimateIn(latitude lat: Double, longitude lon: Double, completion: @escaping (WeatherRequest?, Error?) -> Void) {
     let urlSession = URLSession(configuration: .default)
     let apiToken = Constants.WeatherAPI.keyAPI
     let unit = Constants.WeatherAPI.unit
-    guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?lat=\(lat)&lon=\(lon)&units=\(unit)&appid=\(apiToken)") else {
+    guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?lat=\(String(lat))&lon=\(String(lon))&units=\(unit)&appid=\(apiToken)")
+    else {
         completion(nil, NSError(domain: "InvalidURL", code: 0, userInfo: nil))
         return
     }
+    
+    print(url)
 
     let dataTask = urlSession.dataTask(with: url) { (data, response, error) in
         if let error = error {
